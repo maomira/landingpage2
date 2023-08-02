@@ -5,7 +5,8 @@ window.addEventListener("scroll", function () {
 });
 // Smooth scroll function
 function smoothScroll(target, duration) {
-    const targetPosition = document.querySelector(target).getBoundingClientRect().top;
+    const targetElement = document.querySelector(target);
+    const targetPosition = targetElement.getBoundingClientRect().top;
     const startPosition = window.pageYOffset;
     const distance = targetPosition - startPosition;
     let startTime = null;
@@ -34,6 +35,8 @@ menuItems.forEach(item => {
     item.addEventListener('click', function (event) {
         event.preventDefault();
         const target = this.getAttribute('href');
+        const menuHeight = document.getElementById('menu').offsetHeight; // Get the height of the menu bar
+        const targetPosition = document.querySelector(target).getBoundingClientRect().top;
         smoothScroll(target, 1000); // Adjust the duration as needed (in milliseconds)
     });
 });
