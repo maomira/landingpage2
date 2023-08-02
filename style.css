@@ -96,6 +96,7 @@ body {
     z-index: 1000; /* Make the menu appear on top of other elements */
     opacity: 0; /* Initially set opacity to 0 for the popping animation */
     animation: popInMenu 1s ease-in-out forwards, fadeInMenu 1s ease-in-out 1s forwards; /* Add the popping and fade-in animations */
+    cursor: pointer; /* Add cursor style to indicate clickable menu items */
 }
 
 .menu ul {
