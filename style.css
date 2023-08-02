@@ -155,3 +155,46 @@ body {
 .parallax #page2 .video-container {
     transform: translateY(-50%) translateY(calc(-50% + var(--parallax-offset, 0px) * 0.8));
 }
+
+/* Change the cursor style to a custom cursor image */
+body {
+    cursor: zoom-in;
+}
+
+/*body {
+    cursor: url('custom-cursor.png'), auto;
+}
+
+/* If you prefer to use a built-in cursor style, you can use the following examples: */
+
+/* Example: Change the cursor to a pointer hand */
+/* body {
+    cursor: pointer;
+} */
+
+/* Example: Change the cursor to a crosshair */
+/* body {
+    cursor: crosshair;
+} */
+
+/* Example: Change the cursor to a zoom-in magnifying glass */
+/* body {
+    cursor: zoom-in;
+} */
+
+/* Example: Change the cursor to a grabbing hand for drag and drop */
+/* body {
+    cursor: grab;
+} */
+
+/* Example: Change the cursor to an hourglass for loading/waiting */
+/* body {
+    cursor: wait;
+} */
+
+/* Example: Change the cursor to a not-allowed sign */
+/* body {
+    cursor: not-allowed;
+} */
+
+/* ... Add more cursor styles as desired ... */
