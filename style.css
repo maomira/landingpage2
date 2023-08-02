@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    overflow: hidden;
+    position: relative;
+    height: 300vh; /* Adjust the height based on the number of pages */
+}
+
+.page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+}
+
+#page1 {
+    background-color: #007bff;
+}
+
+#page2 {
+    background-color: #ff5722;
+}
+
+#page3 {
+    background-color: #4caf50;
+}
+
+/* Parallax effect */
+.parallax .page {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.parallax #page1 {
+    transform: translateY(calc(-20% + var(--parallax-offset, 0px) * 0.2));
+}
+
+.parallax #page2 {
+    transform: translateY(calc(-40% + var(--parallax-offset, 0px) * 0.4));
+}
+
+.parallax #page3 {
+    transform: translateY(calc(-60% + var(--parallax-offset, 0px) * 0.6));
+}
