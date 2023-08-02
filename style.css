@@ -46,7 +46,6 @@ body {
     color: white;
     text-align: center;
     opacity: 0;
-    animation: fadeIn 1s forwards, floatAnimation 5s linear infinite;
 }
 
 .reelcrafter-box {
@@ -58,25 +57,6 @@ body {
     color: white;
     text-align: center;
     opacity: 0;
-    animation: fadeIn 1s forwards, floatAnimation 5s linear infinite;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes floatAnimation {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0);
-    }
 }
 
 /* Mouse animation */
@@ -99,7 +79,6 @@ body {
     z-index: 9999;
     cursor: pointer;
     opacity: 0;
-    animation: fadeIn 1s 3s forwards, popInMenu 1s forwards;
 }
 
 .triangle {
@@ -134,10 +113,4 @@ a {
 
 a:hover {
     background-color: #0056b3;
-}
-
-@keyframes popInMenu {
-    to {
-        opacity: 1;
-    }
 }
