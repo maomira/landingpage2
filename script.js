@@ -42,8 +42,15 @@ menuItems.forEach(item => {
     item.addEventListener('click', function (event) {
         event.preventDefault();
         const target = this.getAttribute('href');
-        const menuHeight = document.querySelector('.menu').offsetHeight; // Get the height of the menu bar
+        const menuHeight = document.querySelector('.menu').offsetHeight;
         const targetPosition = document.querySelector(target).getBoundingClientRect().top;
-        smoothScroll(target, 1000); // Adjust the duration as needed (in milliseconds)
+        smoothScroll(target, 1000);
     });
+});
+
+// Mouse animation
+const mouse = document.querySelector(".mouse");
+window.addEventListener("mousemove", (e) => {
+    mouse.style.left = e.pageX + "px";
+    mouse.style.top = e.pageY + "px";
 });
