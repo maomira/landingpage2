@@ -7,46 +7,59 @@ body {
 .parallax {
     overflow: hidden;
     position: relative;
-    height: 300vh; /* Adjust the height based on the number of pages */
+    height: 300vh; /* Adjust the height as needed for the parallax effect */
 }
 
 .page {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 24px;
+    position: relative;
 }
 
+.parallax-text {
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.parallax #page1 .parallax-text1 {
+    transform: translateY(-50%) translateY(calc(-50% + var(--parallax-offset, 0px) * 0.1));
+}
+
+.parallax #page1 .parallax-text2 {
+    transform: translateY(-50%) translateY(calc(-50% + var(--parallax-offset, 0px) * 0.3));
+}
+
+.parallax #page2 .parallax-text3 {
+    transform: translateY(-50%) translateY(calc(-50% + var(--parallax-offset, 0px) * 0.2));
+}
+
+.parallax #page2 .parallax-text4 {
+    transform: translateY(-50%) translateY(calc(-50% + var(--parallax-offset, 0px) * 0.4));
+}
+
+.parallax #page3 .parallax-text5 {
+    transform: translateY(-50%) translateY(calc(-50% + var(--parallax-offset, 0px) * 0.3));
+}
+
+.parallax #page3 .parallax-text6 {
+    transform: translateY(-50%) translateY(calc(-50% + var(--parallax-offset, 0px) * 0.5));
+}
+
+/* Add custom styles for each page and background */
 #page1 {
-    background-color: #007bff;
+    background-color: #ff9900; /* Customize the background color for the first page */
 }
 
 #page2 {
-    background-color: #ff5722;
+    background-color: #0099cc; /* Customize the background color for the second page */
 }
 
 #page3 {
-    background-color: #4caf50;
-}
-
-/* Parallax effect */
-.parallax .page {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-
-.parallax #page1 {
-    transform: translateY(calc(-20% + var(--parallax-offset, 0px) * 0.2));
-}
-
-.parallax #page2 {
-    transform: translateY(calc(-40% + var(--parallax-offset, 0px) * 0.4));
-}
-
-.parallax #page3 {
-    transform: translateY(calc(-60% + var(--parallax-offset, 0px) * 0.6));
+    background-color: #66cc33; /* Customize the background color for the third page */
 }
