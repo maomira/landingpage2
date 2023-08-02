@@ -87,11 +87,13 @@ body {
 /* Menu styles */
 .menu {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: -20px; /* Hide the menu above the viewport initially */
+    right: -20px; /* Hide the menu beyond the viewport initially */
+    background-color: rgba(0, 0, 0, 0.8); /* Add a background color to the menu */
+    padding: 20px;
     z-index: 1000; /* Make the menu appear on top of other elements */
     opacity: 0; /* Initially set opacity to 0 for the popping animation */
-    animation: popInMenu 1s ease-in-out forwards; /* Add the popping animation */
+    animation: popInMenu 1s ease-in-out forwards, fadeInMenu 1s ease-in-out 1s forwards; /* Add the popping and fade-in animations */
 }
 
 .menu ul {
@@ -120,8 +122,17 @@ body {
 /* Popping animation for the menu */
 @keyframes popInMenu {
     to {
+        top: 20px; /* Show the menu from above the viewport */
+        right: 20px; /* Show the menu from beyond the viewport */
         opacity: 1;
-        transform: translateY(-10px) translateX(10px); /* Move the menu diagonally */
+        transform: translateX(0) translateY(0); /* Move the menu diagonally */
+    }
+}
+
+/* Fade-in animation for the menu after the popping animation */
+@keyframes fadeInMenu {
+    to {
+        opacity: 1;
     }
 }
 
