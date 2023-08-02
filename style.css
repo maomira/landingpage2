@@ -22,6 +22,16 @@ body {
     position: relative;
 }
 
+/* Add the following styles for hiding and showing page content */
+
+.page-content {
+    display: none;
+}
+
+.page-content.active {
+    display: block;
+}
+
 .parallax-text {
     position: sticky;
     top: 50%;
