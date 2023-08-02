@@ -66,6 +66,7 @@ body {
 
 /* Additional style for the video container */
 .video-container {
+    display: none; /* Hide the element by default */
     position: relative;
     padding-bottom: 56.25%; /* 16:9 aspect ratio for responsive video */
     width: 100%;
@@ -79,8 +80,9 @@ body {
     height: 100%;
 }
 
-/* Parallax effect for the video container */
-.parallax #page2 .video-container {
+/* Parallax effect for the video container on the second page only */
+.page#page2 .video-container {
+    display: block; /* Show the element only on the second page */
     transform: translateY(-50%) translateY(calc(-50% + var(--parallax-offset, 0px) * 0.8));
 }
 
