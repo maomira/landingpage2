@@ -15,19 +15,6 @@ body {
     overflow: hidden;
 }
 
-/* Customize background colors for each page */
-.black {
-    background-color: black;
-}
-
-.white {
-    background-color: white;
-}
-
-.gold {
-    background-color: gold;
-}
-
 /* Customize text box styles */
 .content {
     display: flex;
@@ -62,13 +49,15 @@ body {
 /* Mouse animation */
 .mouse {
     position: fixed;
-    width: 30px;
-    height: 30px;
-    border: 2px solid white;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
-    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent);
+    background-size: 200% 200%;
+    transition: background 0.1s;
 }
 
 /* Menu */
