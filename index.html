@@ -7,45 +7,70 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Page 1 -->
-    <div class="parallax black" id="page1">
-        <div class="floating-container">
-            <div class="play-button">
-                <span class="play-icon"></span>
+    <div class="menu" id="menu">
+        <ul>
+            <li><a href="#page1">Page 1</a></li>
+            <li><a href="#page2">Page 2</a></li>
+            <li><a href="#page3">Page 3</a></li>
+        </ul>
+    </div>
+
+    <div class="parallax" id="page1">
+        <!-- First Page -->
+        <div class="page-content">
+            <div class="parallax-text parallax-text1">
+                <h1>Page 1 - Box 1</h1>
+                <div class="play-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                        <path d="M4.905 3.237a.5.5 0 0 0 .212.404l5 3a.5.5 0 0 0 0-.816l-5-3a.5.5 0 0 0-.624.812z"/>
+                    </svg>
+                </div>
                 <p>Play</p>
             </div>
         </div>
     </div>
 
-    <!-- Page 2 -->
-    <div class="parallax white" id="page2">
-        <div class="embedded-video">
-            <!-- Embedded code from ReelCrafter with custom class "video-container" -->
+    <div class="parallax" id="page2">
+        <!-- Second Page -->
+        <div class="page-content">
+            <div class="parallax-text parallax-text3">
+                <h1>Page 2 - Box 1</h1>
+                <p>This is the first box on the second page.</p>
+            </div>
             <div class="video-container">
                 <!-- Paste the ReelCrafter embedded code here -->
-                <iframe width="100%" height="400" scrolling="no" frameborder="no"
-                    src="https://play.reelcrafter.com/embed/ee9dd612-a360-4307-81b9-ce513723ca0c">
+                <iframe
+                  width="100%"
+                  height="400"
+                  scrolling="no"
+                  frameborder="no"
+                  src="https://play.reelcrafter.com/embed/ee9dd612-a360-4307-81b9-ce513723ca0c">
                 </iframe>
             </div>
-            <div class="scroll-button">
+            <div class="scroll-down-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down-circle" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 16a8 8 0 1 0 0-16A8 8 0 0 0 8 16zm.5-5.5a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 1 0v3z"/>
+                    <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 0-1 0V6H5.5a.5.5 0 0 0 0 1H8v2.5a.5.5 0 0 0 1 0V7h2.5a.5.5 0 0 0 0-1H8V3.5z"/>
+                </svg>
                 <p>Scroll Down</p>
             </div>
         </div>
     </div>
 
-    <!-- Page 3 -->
-    <div class="parallax gold" id="page3">
-        <div class="text-box parallax-text1">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="text-box parallax-text2">
-            <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="text-box parallax-text3">
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="parallax" id="page3">
+        <!-- Third Page -->
+        <div class="page-content">
+            <div class="parallax-text parallax-text5">
+                <h1>Page 3 - Box 1</h1>
+                <p>This is the first box on the third page.</p>
+            </div>
+            <div class="parallax-text parallax-text6">
+                <h1>Page 3 - Box 2</h1>
+                <p>This is the second box on the third page.</p>
+            </div>
         </div>
     </div>
 
-   <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
