@@ -4,10 +4,16 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.parallax {
-    overflow: hidden;
+.parallax,
+.menu,
+.quote-box {
     position: relative;
-    height: 300vh; /* Adjust the height as needed for the parallax effect */
+    z-index: 2; /* Set higher z-index for the text boxes and menu */
+}
+
+.iframe-wrapper {
+    position: relative;
+    z-index: 1; /* Set lower z-index for the embedded ReelCrafter iframe */
 }
 
 .page {
