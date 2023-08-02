@@ -78,7 +78,6 @@ body {
     right: 20px;
     z-index: 9999;
     cursor: pointer;
-    opacity: 0;
 }
 
 .triangle {
@@ -113,4 +112,14 @@ a {
 
 a:hover {
     background-color: #0056b3;
+}
+
+/* Set higher z-index for the text boxes and menu */
+.parallax, .menu, .box, .reelcrafter-box {
+    z-index: 2;
+}
+
+/* Set lower z-index for the background and video container */
+.parallax.black, .parallax.white, .parallax.gold, .iframe-wrapper {
+    z-index: 1;
 }
