@@ -1,33 +1,23 @@
 window.addEventListener("scroll", function () {
-    const parallax = document.querySelector(".parallax");
+    const parallax = document.querySelectorAll(".parallax");
     let scrollPosition = window.pageYOffset;
-    parallax.style.setProperty('--parallax-offset', scrollPosition + 'px');
+    parallax.forEach((element) => {
+        element.style.setProperty('--parallax-offset', scrollPosition + 'px');
+
+        const pageId = element.getAttribute('id');
+        const contentContainer = element.querySelector('.page-content');
+        const contentTop = contentContainer.getBoundingClientRect().top;
+
+        if (contentTop >= 0 && contentTop <= window.innerHeight) {
+            // Make the current page's content visible
+            contentContainer.classList.add('active');
+        } else {
+            // Hide content for other pages
+            contentContainer.classList.remove('active');
+        }
+    });
 });
-// Smooth scroll function
-function smoothScroll(target, duration) {
-    const targetElement = document.querySelector(target);
-    const targetPosition = targetElement.getBoundingClientRect().top;
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    let startTime = null;
 
-    function animation(currentTime) {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const run = ease(timeElapsed, startPosition, distance, duration);
-        window.scrollTo(0, run);
-        if (timeElapsed < duration) requestAnimationFrame(animation);
-    }
-
-    function ease(t, b, c, d) {
-        t /= d / 2;
-        if (t < 1) return c / 2 * t * t + b;
-        t--;
-        return -c / 2 * (t * (t - 2) - 1) + b;
-    }
-
-    requestAnimationFrame(animation);
-}
 
 // Get menu items and add click event listeners
 const menuItems = document.querySelectorAll('.menu a');
